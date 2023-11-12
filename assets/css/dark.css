@@ -1,0 +1,57 @@
+
+:root:has(.mode input:checked){
+    --color-default: #fff;
+    --primary-hue: 35;
+    --primary-saturation: 72%;
+    --primary-lightness: 44%;
+    --color-secondary: #fff;
+    --color-tertiary: #9f9f9f;
+    --light-hue: 0;
+    --light-saturation: 0%;
+    --light-lightness: 9%;
+    --color-light-grey:#252525;
+
+}
+
+
+body:has(.mode input:checked){
+    background-color: #252525;
+}
+
+
+body:has(.mode input:checked) .card-imge::before{
+   
+    background-image: url(../images/team-shape-dark.svg);
+   
+}
+
+body:not(:has(:target)):has(.mode input:checked) .Home-link,
+ body:has(.Home:target):has(.mode input:checked) .Home-link,
+ body:has(.Chefs:target):has(.mode input:checked) .Chefs-link,
+ body:has(.Gallery:target):has(.mode input:checked) .Gallery-link,
+ body:has(.Contact:target):has(.mode input:checked) .Contact-link
+ {
+    color:#fff;
+ }
+
+ body:not(:has(:target)) .Home-link::before,
+ body:has(.Home:target) .Home-link ::before,
+ body:has(.Chefs:target) .Chefs-link ::before,
+ body:has(.Gallery:target) .Gallery-link ::before,
+ body:has(.Contact:target) .Contact-link::before
+ {
+    width: 100%;
+ }
+ body:has( .mode  input:checked) .navbar ul li  a:hover{
+    color: #Fff;
+ }
+
+ body:has(.mode input:checked) .mode .light{
+    display: block;
+ }
+ body:has(.mode input:checked) .mode .dark{
+    display: none;
+ }
+
+
+
